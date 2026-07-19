@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Управление пользователями</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Пользователи</h1>
+
+    <form id="user-form">
+      <input type="hidden" id="user-id" />
+      <div class="row">
+        <input type="text" id="name" placeholder="Имя" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="number" id="age" placeholder="Возраст" min="0" />
+        <label class="checkbox">
+          <input type="checkbox" id="is_active" checked />
+          Активен
+        </label>
+      </div>
+      <div class="row">
+        <button type="submit" id="submit-btn">Добавить</button>
+        <button type="button" id="cancel-btn" class="secondary" hidden>Отмена</button>
+      </div>
+    </form>
+
+    <p id="error" class="error" hidden></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Имя</th>
+          <th>Email</th>
+          <th>Возраст</th>
+          <th>Статус</th>
+          <th>Действия</th>
+        </tr>
+      </thead>
+      <tbody id="users-table-body"></tbody>
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
