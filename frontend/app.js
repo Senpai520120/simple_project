@@ -1,4 +1,9 @@
-const API_URL = "http://127.0.0.1:8000/api/users";
+// В проде nginx отдаёт фронтенд и проксирует /api на тот же origin.
+// При локальном запуске через `python -m http.server` бэкенд крутится отдельно на 8000.
+const API_URL =
+  window.location.port === "5500"
+    ? "http://127.0.0.1:8000/api/users"
+    : "/api/users";
 
 const form = document.getElementById("user-form");
 const idField = document.getElementById("user-id");

@@ -37,6 +37,10 @@ python -m http.server 5500
 
 Затем откройте `http://127.0.0.1:5500`.
 
+## Деплой на VPS
+
+См. [DEPLOY.md](DEPLOY.md) — деплой через Docker Compose (`docker-compose.prod.yml`).
+
 ## API
 
 - `GET /api/users` — список пользователей
